@@ -1,0 +1,17 @@
+# Use Node.js 18 as the base image
+FROM node:18
+
+ENV WORKDIR=/app
+
+RUN mkdir -p $WORKDIR
+
+WORKDIR $WORKDIR
+
+COPY . $WORKDIR
+
+ARG VITE_API_URL
+ENV VITE_API_URL=${VITE_API_URL}
+
+RUN npm install
+
+CMD ["npm", "run", "build"]

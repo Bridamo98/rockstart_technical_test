@@ -1,0 +1,12 @@
+FROM nginx:alpine
+
+LABEL maintainer="dev@example.com"
+
+WORKDIR /etc/nginx
+
+RUN rm /etc/nginx/conf.d/*
+COPY conf.d/nginx.prod.conf /etc/nginx/conf.d/
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]

@@ -1,0 +1,375 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`agrega y elimina una lección > CoursePage-after-add-lesson 1`] = `
+<DocumentFragment>
+  <div
+    class="container mx-auto p-6 space-y-6"
+  >
+    <button
+      class="btn btn-outline mb-4"
+    >
+      ← Back to Courses
+    </button>
+    <div
+      class="flex items-center justify-between"
+    >
+      <div>
+        <h1
+          class="text-2xl font-bold"
+        >
+          Initial
+        </h1>
+      </div>
+      <div
+        class="space-x-2"
+      >
+        <button
+          class="btn btn-secondary"
+        >
+          Edit
+        </button>
+        <button
+          class="btn btn-error"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+    <p>
+      desc
+    </p>
+    <hr />
+    <div
+      class="flex items-center justify-between"
+    >
+      <h2
+        class="text-xl font-semibold"
+      >
+        Lessons
+      </h2>
+      <button
+        class="btn btn-primary"
+      >
+        Add lesson
+      </button>
+    </div>
+    <div
+      class="grid md:grid-cols-2 gap-4"
+    >
+      <div
+        class="bg-white p-4 rounded shadow space-y-2"
+      >
+        <h4
+          class="font-bold"
+        >
+          L1
+        </h4>
+        <div
+          class="aspect-video"
+        >
+          <iframe
+            allowfullscreen=""
+            class="w-full h-full"
+            src="https://www.youtube.com/embed/ABCDEFGHIJK"
+            title="video_ABCDEFGHIJK"
+          />
+        </div>
+        <div
+          class="flex gap-2"
+        >
+          <button
+            class="btn btn-sm btn-secondary"
+          >
+            Edit
+          </button>
+          <button
+            class="btn btn-sm btn-error"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`agrega y elimina una lección > CoursePage-after-click-delete 1`] = `
+<DocumentFragment>
+  <div
+    class="container mx-auto p-6 space-y-6"
+  >
+    <button
+      class="btn btn-outline mb-4"
+    >
+      ← Back to Courses
+    </button>
+    <div
+      class="flex items-center justify-between"
+    >
+      <div>
+        <h1
+          class="text-2xl font-bold"
+        >
+          Initial
+        </h1>
+      </div>
+      <div
+        class="space-x-2"
+      >
+        <button
+          class="btn btn-secondary"
+        >
+          Edit
+        </button>
+        <button
+          class="btn btn-error"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+    <p>
+      desc
+    </p>
+    <hr />
+    <div
+      class="flex items-center justify-between"
+    >
+      <h2
+        class="text-xl font-semibold"
+      >
+        Lessons
+      </h2>
+      <button
+        class="btn btn-primary"
+      >
+        Add lesson
+      </button>
+    </div>
+    <div
+      class="grid md:grid-cols-2 gap-4"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`agrega y elimina una lección > CoursePage-before-add-lesson 1`] = `
+<DocumentFragment>
+  <div
+    class="container mx-auto p-6 space-y-6"
+  >
+    <button
+      class="btn btn-outline mb-4"
+    >
+      ← Back to Courses
+    </button>
+    <hr />
+    <div
+      class="flex items-center justify-between"
+    >
+      <h2
+        class="text-xl font-semibold"
+      >
+        Lessons
+      </h2>
+      <button
+        class="btn btn-primary"
+      >
+        Add lesson
+      </button>
+    </div>
+    <div
+      class="grid md:grid-cols-2 gap-4"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`agrega y elimina una lección > CoursePage-before-click-delete 1`] = `
+<body>
+  <div>
+    <div
+      class="container mx-auto p-6 space-y-6"
+    >
+      <button
+        class="btn btn-outline mb-4"
+      >
+        ← Back to Courses
+      </button>
+      <div
+        class="flex items-center justify-between"
+      >
+        <div>
+          <h1
+            class="text-2xl font-bold"
+          >
+            Initial
+          </h1>
+        </div>
+        <div
+          class="space-x-2"
+        >
+          <button
+            class="btn btn-secondary"
+          >
+            Edit
+          </button>
+          <button
+            class="btn btn-error"
+          >
+            Delete
+          </button>
+        </div>
+      </div>
+      <p>
+        desc
+      </p>
+      <hr />
+      <div
+        class="flex items-center justify-between"
+      >
+        <h2
+          class="text-xl font-semibold"
+        >
+          Lessons
+        </h2>
+        <button
+          class="btn btn-primary"
+        >
+          Add lesson
+        </button>
+      </div>
+      <div
+        class="grid md:grid-cols-2 gap-4"
+      >
+        <div
+          class="bg-white p-4 rounded shadow space-y-2"
+        >
+          <h4
+            class="font-bold"
+          >
+            L1
+          </h4>
+          <div
+            class="aspect-video"
+          >
+            <iframe
+              allowfullscreen=""
+              class="w-full h-full"
+              src="https://www.youtube.com/embed/ABCDEFGHIJK"
+              title="video_ABCDEFGHIJK"
+            />
+          </div>
+          <div
+            class="flex gap-2"
+          >
+            <button
+              class="btn btn-sm btn-secondary"
+            >
+              Edit
+            </button>
+            <button
+              class="btn btn-sm btn-error"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="fixed inset-0 z-50 flex items-center justify-center bg-black/50"
+  >
+    <div
+      class="bg-white rounded shadow p-6 w-full max-w-lg"
+    >
+      <h3
+        class="text-lg font-semibold mb-3"
+      >
+        Delete lesson?
+      </h3>
+      <p
+        class="mb-6"
+      >
+        "L1" will be removed.
+      </p>
+      <div
+        class="flex justify-end gap-2"
+      >
+        <button
+          class="btn btn-secondary"
+        >
+          Cancel
+        </button>
+        <button
+          class="btn btn-error"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`muestra info y permite actualizar título > CoursePage-after-update 1`] = `
+<DocumentFragment>
+  <div
+    class="container mx-auto p-6 space-y-6"
+  >
+    <button
+      class="btn btn-outline mb-4"
+    >
+      ← Back to Courses
+    </button>
+    <div
+      class="flex items-center justify-between"
+    >
+      <div>
+        <h1
+          class="text-2xl font-bold"
+        >
+          Updated!
+        </h1>
+      </div>
+      <div
+        class="space-x-2"
+      >
+        <button
+          class="btn btn-secondary"
+        >
+          Edit
+        </button>
+        <button
+          class="btn btn-error"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+    <p>
+      desc
+    </p>
+    <hr />
+    <div
+      class="flex items-center justify-between"
+    >
+      <h2
+        class="text-xl font-semibold"
+      >
+        Lessons
+      </h2>
+      <button
+        class="btn btn-primary"
+      >
+        Add lesson
+      </button>
+    </div>
+    <div
+      class="grid md:grid-cols-2 gap-4"
+    />
+  </div>
+</DocumentFragment>
+`;

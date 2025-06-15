@@ -1,0 +1,86 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`cancelar formulario vuelve al estado anterior > CoursesPage-cancelado 1`] = `
+<DocumentFragment>
+  <div
+    class="container mx-auto p-6"
+  >
+    <h1
+      class="text-3xl font-bold mb-4"
+    >
+      Courses
+    </h1>
+    <button
+      class="btn btn-primary mb-4"
+    >
+      New course
+    </button>
+    <ul
+      class="space-y-2"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`flujo de crear & lista curso (snapshot) > CoursesPage-estado-inicial 1`] = `
+<DocumentFragment>
+  <div
+    class="container mx-auto p-6"
+  >
+    <h1
+      class="text-3xl font-bold mb-4"
+    >
+      Courses
+    </h1>
+    <button
+      class="btn btn-primary mb-4"
+    >
+      New course
+    </button>
+    <p>
+      Loading …
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`flujo de crear & lista curso (snapshot) > CoursesPage-tras-crear-curso 1`] = `
+<DocumentFragment>
+  <div
+    class="container mx-auto p-6"
+  >
+    <h1
+      class="text-3xl font-bold mb-4"
+    >
+      Courses
+    </h1>
+    <button
+      class="btn btn-primary mb-4"
+    >
+      New course
+    </button>
+    <ul
+      class="space-y-2"
+    >
+      <li
+        class="p-4 bg-white rounded shadow hover:bg-gray-50"
+      >
+        <a
+          href="/courses/1"
+        >
+          <h2
+            class="font-semibold"
+          >
+            E2E
+          </h2>
+          <p
+            class="text-sm text-gray-600"
+          >
+            desc
+          </p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</DocumentFragment>
+`;

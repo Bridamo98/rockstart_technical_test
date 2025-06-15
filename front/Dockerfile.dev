@@ -1,0 +1,31 @@
+# Use Node.js 18 as the base image
+FROM node:18 as base
+
+ENV WORKDIR=/app
+
+RUN mkdir -p $WORKDIR
+WORKDIR $WORKDIR
+
+COPY ./package.json ./
+COPY ./package-lock.json ./
+
+RUN npm install
+
+COPY . .
+
+# Start the development server
+FROM base AS run
+
+EXPOSE 5173
+
+CMD ["npm", "run", "dev"]
+
+# Run tests
+FROM base AS test
+
+CMD ["npm", "run", "test"]
+
+# Run tests and update snapshots
+FROM base AS update_snap
+
+CMD ["npm", "run", "test", "--", "-u"]

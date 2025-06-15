@@ -1,0 +1,35 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`rechaza url que no sea de YouTube (snapshot) 1`] = `
+<DocumentFragment>
+  <form
+    class="space-y-4 bg-gray-100 p-4 rounded"
+  >
+    <div>
+      <input
+        class="input w-full"
+        maxlength="255"
+        name="title"
+        placeholder="Lesson title"
+      />
+    </div>
+    <div>
+      <input
+        class="input w-full"
+        name="video_url"
+        placeholder="YouTube URL"
+      />
+      <p
+        class="text-sm text-red-600"
+      >
+        Must be a YouTube link
+      </p>
+    </div>
+    <button
+      class="btn btn-primary"
+    >
+      Save
+    </button>
+  </form>
+</DocumentFragment>
+`;

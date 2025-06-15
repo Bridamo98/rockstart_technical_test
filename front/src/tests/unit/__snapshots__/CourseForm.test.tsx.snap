@@ -1,0 +1,87 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`UI inicial coincide con snapshot 1`] = `
+<DocumentFragment>
+  <form
+    class="space-y-4 bg-white p-4 rounded shadow"
+  >
+    <div>
+      <input
+        class="input w-full"
+        maxlength="255"
+        name="title"
+        placeholder="Title"
+      />
+    </div>
+    <div>
+      <textarea
+        class="textarea w-full"
+        name="course_desc"
+        placeholder="Description"
+      />
+    </div>
+    <div>
+      <select
+        class="select w-full"
+        name="instructor_id"
+      />
+    </div>
+    <button
+      class="btn btn-primary"
+    >
+      Save
+    </button>
+  </form>
+</DocumentFragment>
+`;
+
+exports[`muestra errores si se envía vacío > CourseForm-con-errores 1`] = `
+<DocumentFragment>
+  <form
+    class="space-y-4 bg-white p-4 rounded shadow"
+  >
+    <div>
+      <input
+        class="input w-full"
+        maxlength="255"
+        name="title"
+        placeholder="Title"
+      />
+      <p
+        class="text-sm text-red-600"
+      >
+        Title is required
+      </p>
+    </div>
+    <div>
+      <textarea
+        class="textarea w-full"
+        name="course_desc"
+        placeholder="Description"
+      />
+      <p
+        class="text-sm text-red-600"
+      >
+        Description is required
+      </p>
+    </div>
+    <div>
+      <select
+        class="select w-full"
+        name="instructor_id"
+      >
+        <option
+          value="1"
+        >
+          Inst
+        </option>
+      </select>
+    </div>
+    <button
+      class="btn btn-primary"
+    >
+      Save
+    </button>
+  </form>
+</DocumentFragment>
+`;

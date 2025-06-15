@@ -1,0 +1,65 @@
+services:
+  nginx_prod:
+    restart: always
+    container_name: nginx_prod
+    build:
+      context: ./nginx/
+      dockerfile: Dockerfile.prod
+    volumes:
+      - ./front/dist:/var/www/front
+    ports:
+      - "4000:80"
+    depends_on:
+      - back_prod
+      - front_prod
+  database_prod:
+    image: postgres:16
+    restart: always
+    container_name: database_prod
+    ports:
+      - "5001:5432"
+    environment:
+      POSTGRES_PASSWORD: ${PROD_POSTGRES_PASSWORD}
+      POSTGRES_USER: ${PROD_POSTGRES_USER}
+      POSTGRES_DB: ${PROD_POSTGRES_DB}
+    volumes:
+      - ./database/prod/persistence/data/postgres-data:/var/lib/postgresql/data
+      # - ./database/prod:/docker-entrypoint-initdb.d  # Another way to init database ( using init.sql)
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+  back_migrate:
+    container_name: back_migrate
+    build:
+      context: ./back/
+      target: migrate
+      dockerfile: Dockerfile.prod
+      args:
+        COMMIT_ID: "head"
+    environment:
+      - DATABASE_URL=${PROD_DATABASE_URL}
+    depends_on:
+      database_prod:
+        condition: service_healthy
+  back_prod:
+    container_name: back_prod
+    build:
+      context: ./back/
+      target: run
+      dockerfile: Dockerfile.prod
+    ports:
+      - "8001:8000"
+    environment:
+      - BACK_ENV=prod
+      - DATABASE_URL=${PROD_DATABASE_URL}
+    depends_on:
+      back_migrate:
+        condition: service_completed_successfully
+  front_prod:
+    container_name: front_prod
+    build:
+      context: ./front/
+      dockerfile: Dockerfile.prod
+      args:
+        VITE_API_URL:  http://localhost:4000/back/
+    volumes:
+      - ./front/dist:/app/dist

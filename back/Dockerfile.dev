@@ -1,0 +1,47 @@
+FROM python:3.10.0 AS base
+
+ENV WORKDIR=/app
+
+RUN mkdir -p "$WORKDIR"
+
+WORKDIR "$WORKDIR"
+
+COPY ./requirements.txt $WORKDIR/requirements.txt
+
+RUN pip install -r requirements.txt
+
+COPY Pipfile .
+COPY Pipfile.lock .
+
+RUN pipenv install --dev
+
+COPY . "$WORKDIR"
+
+FROM base AS run
+
+EXPOSE 8000
+
+# Run flask instance
+CMD ["pipenv", "run", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+
+FROM base AS test
+
+# Run testing
+CMD ["pipenv", "run", "pytest"]
+
+FROM base AS update_snap
+
+# Update snapshots
+CMD ["pipenv", "run", "pytest", "--snapshot-update"]
+
+# Run migrations
+FROM base AS migrate
+
+ARG COMMIT_ID
+ENV COMMIT_ID=${COMMIT_ID}
+
+WORKDIR /app/app/models
+
+RUN chmod +x entrypoint.sh
+
+ENTRYPOINT ["/app/app/models/entrypoint.sh"]

@@ -1,0 +1,32 @@
+FROM python:3.10.0 AS base
+
+ENV WORKDIR=/app
+
+RUN mkdir -p "$WORKDIR"
+
+WORKDIR "$WORKDIR"
+
+COPY . "$WORKDIR"
+
+RUN pip install -r requirements.txt
+
+COPY Pipfile .
+COPY Pipfile.lock .
+
+RUN pipenv install
+
+FROM base AS run
+
+EXPOSE 8000
+
+CMD ["pipenv", "run", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000","--root-path", "/back", "--proxy-headers"]
+
+# Run migrations
+FROM base AS migrate
+
+ARG COMMIT_ID
+ENV COMMIT_ID=${COMMIT_ID}
+
+WORKDIR /app/app/models
+
+CMD ["pipenv", "run", "alembic", "upgrade", "${COMMIT_ID}"]

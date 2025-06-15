@@ -1,0 +1,22 @@
+{
+    "recommendations": [
+        // Specifics
+        "charliermarsh.ruff",
+        "GrapeCity.gc-excelviewer",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-vscode-remote.remote-ssh",
+        "mechatroner.rainbow-csv",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ahmadalli.vscode-nginx-conf",
+        "ms-azuretools.vscode-docker",
+        // Generals
+        "shardulm94.trailing-spaces",
+        "streetsidesoftware.code-spell-checker",
+        "SonarSource.sonarlint-vscode",
+        "usernamehw.errorlens",
+        "znck.grammarly",
+        "eamodio.gitlens"
+    ]
+}
